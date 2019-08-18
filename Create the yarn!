@@ -1,0 +1,44 @@
+ let colorSwitch = true;
+
+function setup() {
+  createCanvas(500, 500);
+  background(0, 0, 0);
+  
+  
+  
+}
+
+function draw() {
+  
+randomChord();
+randomChord();
+
+
+}
+
+function randomChord() {
+ let angle1 = random(0, 2 * PI);
+ let xpos1 = 200 + 200 * cos(angle1);
+ let ypos1 = 200 + 200 * sin(angle1);
+  
+  
+ let angle2 = random(0, 2 * PI);
+ let xpos2 = 200 + 200 * cos(angle2);
+ let ypos2 = 200 + 200 * sin(angle2);
+  
+  if(colorSwitch) {
+      stroke(65, 244, 92, 50);
+      line(xpos1, ypos1, xpos2, ypos2);
+      colorSwitch = false;
+  }
+  
+  else { 
+      stroke(244, 66, 104, 50);
+    	line(xpos1, ypos1, xpos2, ypos2);
+      colorSwitch = true;
+
+  }
+    
+
+  
+}
